@@ -64,6 +64,7 @@ public class Fraction
 		
 		// set the value to the denominator
         this.denominator = denominator;
+		adjustSign();
 	}
 
 	/**
