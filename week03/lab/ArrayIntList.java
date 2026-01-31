@@ -15,7 +15,6 @@ public class ArrayIntList implements Iterable<Integer> {
     
     // pre : capacity >= 0
     // post: constructs an empty list with the given capacity
-    // 0.
     public ArrayIntList(int capacity) {
         if (capacity < 0) {
             throw new IllegalArgumentException("Capacity must not be negative");
