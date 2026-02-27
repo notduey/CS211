@@ -1,3 +1,4 @@
+package week08.assignment;
 /**
  * The class represents the exception when a collection is empty.
  * @author Varik Hoang <varikmp@uw.edu>

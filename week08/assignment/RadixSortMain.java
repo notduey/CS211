@@ -1,3 +1,5 @@
+package week08.assignment;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -19,9 +21,9 @@ public class RadixSortMain
 	public static void main(String[] theArguments) throws FileNotFoundException
 	{
 		Deque<Integer> master = new LinkedDeque<Integer>();
-		readFileIntoDeque("input100.txt", master);
+		readFileIntoDeque("week08/assignment/input100.txt", master);
 		RadixSort.sort(master);
-		writeDequeToFile("output100.txt", master);
+		writeDequeToFile("week08/assignment/output100.txt", master);
 	}
 	
 	/**
@@ -32,8 +34,12 @@ public class RadixSortMain
 	 */
 	public static void readFileIntoDeque(String filename, Deque<Integer> queue) throws FileNotFoundException
 	{
-		// TODO IMPLEMENT CODE HERE
-		
+		Scanner input = new Scanner(new File(filename));
+		while (input.hasNext())
+		{
+			queue.addRear(input.nextInt());
+		}
+		input.close();
 	}
 	
 	/**
@@ -44,7 +50,10 @@ public class RadixSortMain
 	 */
 	public static void writeDequeToFile(String filename, Deque<Integer> queue) throws FileNotFoundException
 	{
-		// TODO IMPLEMENT CODE HERE
-		
+		PrintStream output = new PrintStream(new FileOutputStream(filename));
+		while (!queue.isEmpty()) {
+			output.println(queue.removeFront());
+		}
+		output.close();
 	}
 }

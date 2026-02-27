@@ -1,3 +1,4 @@
+package week08.assignment;
 /**
  * The class defines a node-based queue.
  * @author Varik Hoang <varikmp@uw.edu>

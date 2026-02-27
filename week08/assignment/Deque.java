@@ -1,4 +1,4 @@
-
+package week08.assignment;
 public interface Deque<Type>
 extends Queue<Type>
 {
